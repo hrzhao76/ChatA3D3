@@ -1,0 +1,43 @@
+[project]
+name = "chata3d3"
+version = "0.1.0"
+description = "RAG and data loading pipeline for ChatA3D3"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests",
+    "beautifulsoup4>=4.13.4",
+    "langchain>=0.3.26",
+    "langchain-community>=0.3.26",
+    "langchain-huggingface>=0.3.0",
+    "langchain-qdrant>=0.2.0",
+    "lxml>=6.0.0",
+    "qdrant-client>=1.14.3",
+    "sentence-transformers>=5.0.0",
+    "torch>=2.7.1",
+    "transformers>=4.53.0",
+    "urllib3",
+    "pip>=25.1.1",
+    "pymupdf>=1.26.3",
+    "panel>=1.7.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "pytest",
+    "python-dotenv",
+    "pre-commit",
+    "ipykernel"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
